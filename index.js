@@ -79,3 +79,13 @@ console.log(stringarray);
 var grades = [88, 94, 72, 99, 53, 77];
 var averagegrades = grades.reduce(function (total, grades) { return total + grades; }, 0) / grades.length;
 console.log(averagegrades);
+// Q58 - Write a simple program that can take lots of scores and find their average.
+function findaverage() {
+    var scores = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        scores[_i] = arguments[_i];
+    }
+    var total = scores.reduce(function (sum, score) { return sum + score; }, 0);
+    return total / scores.length;
+}
+console.log(findaverage(23, 45, 43, 67, 89, 99));
